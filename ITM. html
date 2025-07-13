@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IN THEIR MINDS</title>
+  <script>
+    // Simple collapsible logic
+    function toggle(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === "none" ? "block" : "none");
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #1a1a2e, #16213e);
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #0f3460;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      background: linear-gradient(45deg, #e94560, #0f3460);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .section {
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 30px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    .button {
+      cursor: pointer;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      margin: 1rem 0;
+      background: #e94560;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #ff6b81;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>IN THEIR MINDS</h1>
+    <p>"WE SHALL START THEN SHALL'NT WE?"</p>
+  </header>
+
+  <div class="section">
+    <h2>What is ITM?</h2>
+    <p>
+      A multiversal fever dream dipped in godhood, comedy, catastrophe, and chaos.  
+      <strong>IN THEIR MINDS</strong> is a surreal episodic novel where reality is paper-thin, gods are made—not born—and even the Void has a personality crisis.
+    </p>
+    <p>
+      Created by the ones chosen by a dying deity, *Creator* and *Creatia*, this tale is about rebuilding imagination from scratch, facing anomalies, and somehow still cracking jokes while being hunted by the universe itself.
+    </p>
+    <p>
+      Fourth walls crumble. Characters argue with narration. No thought is safe. No mind is untouched.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2 onclick="toggle('acts')" class="button">+ Acts</h2>
+    <div id="acts" class="hidden">
+      <div class="section" style="background: #0f3460;">
+        <h3 onclick="toggle('act1')" class="button">+ ACT 1: GOD TRAINING ARC</h3>
+        <div id="act1" class="hidden">
+          <div class="section" style="background: #16213e;">
+            <h4 onclick="toggle('ark1')" class="button">+ ARK 1: BEGINNINGS</h4>
+            <div id="ark1" class="hidden">
+              <p><strong>Episode 00: ONCE AGAIN</strong></p>
+              <p>The skies over Gaiya are clear. Clocktowers tick. Children walk to school. And yet... something feels off. Something ancient whispers through time.</p>
+              <p><i>"With it — a whisper."</i></p>
+              <p><b>"WE SHALL START THEN SHALL'NT WE?"</b></p>
+              <p>Thus begins the unraveling.</p>
+            </div>
+
+            <h4 onclick="toggle('ark2')" class="button">+ ARK 2: VOID WAKES</h4>
+            <div id="ark2" class="hidden">
+              <p>Coming soon — Watch this space before it watches back.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="background: #222831;">
+        <h3 onclick="toggle('act2')" class="button">+ ACT 2: ASCENSION ARC</h3>
+        <div id="act2" class="hidden">
+          <p>Strap in. The gods are learning what it means to truly exist... and what it costs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align: center; margin: 2rem; font-size: 0.8rem; opacity: 0.7;">
+    <p>This is IN THEIR MINDS. You are not safe. You are welcome.</p>
+  </footer>
+
+</body>
+</html>
